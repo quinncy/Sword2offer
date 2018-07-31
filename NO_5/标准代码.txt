@@ -1,0 +1,11 @@
+void printList(ListNode * pHead)
+{
+	if(pHead != NULL)
+	{
+		if(pHead -> m_pNext != NULL)
+		{
+			printList(pHead -> m_pNext);
+		}
+		printf("%d\t", pHead -> m_nValue);
+	}
+}
