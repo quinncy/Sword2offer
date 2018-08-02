@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\NO_4\main.c" />
+    <ClCompile Include="..\..\NO_11\main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7835E494-D4E2-4219-A9D1-9C115B7EEF1E}</ProjectGuid>
