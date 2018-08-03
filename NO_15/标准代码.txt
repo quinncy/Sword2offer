@@ -1,0 +1,25 @@
+
+ListNode * FindKthToTail(ListNode * pHead, unsigned int k)
+{
+	ListNode * pFirst = pHead;
+	ListNode * pSecond = pHead;
+	int i;
+	if(pHead == NULL || k == 0)
+		return NULL;
+		
+		
+	for(i = 0; i < k-1; i++)
+	{
+		pSecond = pHead -> m_nNext;
+		if(pSecond == NULL)
+			return NULL;
+	}
+	
+	while(pSecond -> m_nNext != NULL)
+	{
+		pFirst = pFirst -> m_nNext;
+		pSecond = pSecond -> m_nNext;
+	}
+	
+	return pFirst;
+}
