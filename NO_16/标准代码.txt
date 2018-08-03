@@ -1,0 +1,22 @@
+
+ListNode * ReverseList(ListNode * pHead)
+{
+	ListNode * pPre = NULL;
+	ListNode * pCur = pHead;
+	ListNode * pLst = NULL;
+	ListNode * pReverseHead = NULL;
+		
+	while(pCur != NULL)
+	{
+		pLst = pCur -> m_nNext;
+		if(pLst == NULL)
+			pReverseHead = pCur;
+			
+		pCur -> m_nNext = pPre;
+		
+		pPre = pCur;
+		pCur = pLst;
+	}
+	
+	return pReverseHead;
+}
