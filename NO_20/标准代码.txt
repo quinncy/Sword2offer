@@ -1,0 +1,56 @@
+
+void PrintMatrix(int ** numbers, int columns, int rows)
+{
+	if(numbers == NULL || columns <= 0 || rows <= 0)
+		return;
+		
+	int start = 0;
+	while(columns > start * 2 && rows > start * 2)
+	{
+		PrintMatrixInCircle(numbers, columns, rows, start);
+		++start;
+	}
+}
+
+void PrintMatrixInCircle(int ** numbers, int columns, int rows, int start)
+{
+	int endX = columns - 1 - start;
+	itn endY = rows - 1 - start;
+	
+	//从左向右打印
+	for(int i = start; i <= endX; i++)
+	{
+		int number = numbers[start][i]
+		print(number);
+	}
+	
+	//从上到下打印
+	if(start < endY)
+	{
+		for(int i = start + 1; i <= endY; i++)
+		{
+			int number = numbers[endX][i];
+			print(number);
+		}
+	}
+	
+	//从右到左打印
+	if(start < endY && start < endX)
+	{
+		for(int i = endX -1; i >= start; i--)
+		{
+			int number = numbers[i][endY];
+			print(number);
+		}
+	}
+	
+	//从下到上打印
+	if(start + 1 < endY && start < endX)
+	{
+		for(int i = endY - 1; i > start; i--)
+		{
+			int number = number[i][start];
+			print(number);
+		}
+	}
+}
