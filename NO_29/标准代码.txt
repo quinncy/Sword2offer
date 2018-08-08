@@ -1,0 +1,26 @@
+
+int MoreThanHalfNum(int * number, int length)
+{
+	if(CheckInvalidArray(number, length))
+		return 0;
+	
+	int result = number[0];
+	int times = 1;
+	for(int i = 1; i < length; i++)
+	{
+		if(times == 0)
+		{
+			result = number[i];
+			times = 1;
+		}
+		else if(number[i] == result)
+			times++;
+		else
+			times--;
+	}
+	
+	if(!CheckMoreThanHalf(number, length, result))
+		result = 0;
+		
+	return result;
+}
